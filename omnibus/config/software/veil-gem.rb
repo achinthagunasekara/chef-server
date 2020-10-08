@@ -15,7 +15,7 @@
 # limitations under the License.
 #
 name "veil-gem"
-default_version "9e47ba9fc8a31aa2a4f9317de69b677fa34eb17e"
+default_version "e74d8b8745b70f9e69b844542ed78eb0458e6098"
 source git: "https://github.com/chef/chef_secrets.git"
 
 license "Apache-2.0"
