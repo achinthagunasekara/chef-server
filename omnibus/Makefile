@@ -40,11 +40,11 @@ update:
 extract_dev_cache:
 	mkdir -p $(DEV_PLATFORM)_git_cache
 	cd .kitchen/kitchen-vagrant/default-$(DEV_PLATFORM) \
-	&& vagrant ssh -c 'cp -R /var/cache/omnibus/cache/git_cache /home/vagrant/$(DEV_PROJECT)/$(DEV_PLATFORM)_git_cache'
+	&& vagrant ssh -c 'cp -R /var/cache/omnibus/cache/git_cache $(HOME)/vagrant/$(DEV_PROJECT)/$(DEV_PLATFORM)_git_cache'
 
 deploy_dev_cache:
 	cd .kitchen/kitchen-vagrant/default-$(DEV_PLATFORM) \
-	&& vagrant ssh -c 'mkdir -p /var/cache/omnibus/cache && rm -rf /var/cache/omnibus/cache/* && cp -R /home/vagrant/$(DEV_PROJECT)/$(DEV_PLATFORM)_git_cache/* /var/cache/omnibus/cache'
+	&& vagrant ssh -c 'mkdir -p /var/cache/omnibus/cache && rm -rf /var/cache/omnibus/cache/* && cp -R $(HOME)/vagrant/$(DEV_PROJECT)/$(DEV_PLATFORM)_git_cache/* /var/cache/omnibus/cache'
 
 # Remove all but the most recent installer package (and its metadata
 # file) from the pkg directory.  This is used to keep the pkg

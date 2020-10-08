@@ -5,7 +5,7 @@ driver:
     cpus: 4
     memory: 4096
   synced_folders:
-    - ['..', '/home/vagrant/chef-server']
+    - ['..', '/Users/agunasekara/Documents/Git_Workspace/chef-build/vagrant/chef-server']
 
 provisioner:
   name: chef_zero
